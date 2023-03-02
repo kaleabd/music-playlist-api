@@ -8,6 +8,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 //DB configs
+mongoose.set("strictQuery", false);
 mongoose
   .connect("mongodb+srv://kaleabd:DvaKSy4F45H2ezYY@cluster0.hipl3.mongodb.net/?retryWrites=true&w=majority")
   .catch((err) => console.log(err));
